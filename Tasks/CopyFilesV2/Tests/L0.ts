@@ -129,7 +129,7 @@ describe('CopyFiles L0 Suite', function () {
         runner.run();
 
         assert(runner.failed, 'should have failed');
-        assert(runner.createdErrorIssue('Unhandled: Input required: Contents'), 'should have created error issue');
+        assert(runner.createdErrorIssue('Error: Input required: Contents'), 'should have created error issue');
         done();
     });
 
@@ -141,7 +141,7 @@ describe('CopyFiles L0 Suite', function () {
         runner.run();
 
         assert(runner.failed, 'should have failed');
-        assert(runner.createdErrorIssue('Unhandled: Input required: SourceFolder'), 'should have created error issue');
+        assert(runner.createdErrorIssue('Error: Input required: SourceFolder'), 'should have created error issue');
         done();
     });
 
@@ -153,7 +153,7 @@ describe('CopyFiles L0 Suite', function () {
         runner.run();
 
         assert(runner.failed, 'should have failed');
-        assert(runner.createdErrorIssue('Unhandled: Input required: TargetFolder'), 'should have created error issue');
+        assert(runner.createdErrorIssue('Error: Input required: TargetFolder'), 'should have created error issue');
         done();
     });
 
@@ -165,7 +165,7 @@ describe('CopyFiles L0 Suite', function () {
         runner.run();
 
         assert(runner.failed, 'should have failed');
-        assert(runner.createdErrorIssue(`Unhandled: Not found ${path.normalize('/srcDir')}`), 'should have created error issue');
+        assert(runner.createdErrorIssue(`Error: Not found ${path.normalize('/srcDir')}`), 'should have created error issue');
         done();
     });
 
